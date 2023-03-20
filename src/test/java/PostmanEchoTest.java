@@ -10,14 +10,14 @@ public class PostmanEchoTest {
         // Given - When - Then
         given()
                 .baseUri("https://postman-echo.com")
-                .body("test ")
+                .body("test")
 
                 .when()
                 .post("/post")
 
                 .then()
                 .statusCode(200)
-                .body("data", equalTo("1"))
+                .body("data", equalTo("test"))
         ;
     }
 }
